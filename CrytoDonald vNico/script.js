@@ -258,6 +258,11 @@ function subirNivelDistrib(){
 
 
 
+
+
+
+
+
 function verificar() {
     console.log("BALANCE: " + balance)
     console.log("NIVEL DE COCINA: " + nivel)
