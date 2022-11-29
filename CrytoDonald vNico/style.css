@@ -1,0 +1,33 @@
+.container {
+    padding:5px 30px 30px 30px;
+    margin:30px;
+    border:solid white 1px;
+    border-radius:5px;
+    /*background-color:#e6e6e6;*/
+    text-align:center;
+  }
+  
+  .btn-success, .btn-danger {
+    width:200px;
+  }
+
+  body{
+    background-color: #FFBB33 ;
+  } 
+
+  .cajaV{
+    background-color: #9C33FF ;
+    border-radius: 20px;
+    margin: 0px;
+    padding: 0px;
+    height: 80px;
+    width: 150px;
+    display:inline-block;
+  }
+
+  .fBlanco{
+    color: aliceblue;
+    margin: 10px;
+    text-align: center;
+  }
+ 

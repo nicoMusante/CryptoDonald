@@ -1,0 +1,53 @@
+.bordeGeneral {
+    border-color: black;
+    border-width: 5px;
+    border-style: solid;
+    width: 300px;
+    height: 500px;
+    position: relative;
+    top: 110px;
+}
+
+
+.borde {
+    border-color: black;
+    border-width: 3px;
+    border-style: solid;
+    width: 300px;
+}
+
+
+.envio {
+    border-color: black;
+    border-width: 3px;
+    border-style: solid;
+    width: 400px;
+    float: right;
+}
+
+
+.almacen {
+    border-color: black;
+    border-width: 3px;
+    border-style: solid;
+    width: 400px;
+    position: relative;
+    top: 620px;
+}
+
+
+
+
+#Progress_Status {
+    width: 50%;
+    background-color: #ddd;
+}
+
+#myprogressBar {
+    width: 1%;
+    height: 35px;
+    background-color: #4CAF50;
+    text-align: center;
+    line-height: 32px;
+    color: black;
+}
