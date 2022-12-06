@@ -61,7 +61,7 @@ let valorNivelJefe8 = 100
 let valorNivelJefe9 = 100
 let valorNivelJefe10 = 100
 
-let tiempoJefe1 = 1000
+let tiempoJefe1 = 1100
 let tiempoJefe2 = 1000
 let tiempoJefe3 = 1000
 let tiempoJefe4 = 1000
@@ -316,14 +316,14 @@ function clickear1Jefe(niv, piso, nivJefe) {
 }
 
 
-function contratarJefe1(nivJefe) {
+function contratarJefe1() {
     if (balance >= valorJefe) {
         balance = balance - valorJefe
         document.getElementById("saldo").innerHTML = balance + "$"
         document.getElementById("subirJefe").innerHTML = "Subir Nivel JEFE"
         nivelJefe1 = 1
-        setInterval(clickear1(1, 1), 1000)
         console.log("asddd")
+        subirNivelJefe1()
     }
     else
         alert("Se necesita " + valorJefe + " de saldo para contratar un jefe")
@@ -358,13 +358,16 @@ function contratarJefe3(nivJefe) {
     return nivJefe, balance
 }
 
-function subirNivelJefe1(nivJefe, valorNivJefe, tiempoJ, niv, piso) {
-    if (nivJefe < MaxNivjefe && balance >= valorNivJefe) {
+function subirNivelJefe1() {
+    if (nivelJefe1 < MaxNivjefe && balance >= valorNivelJefe1) {
         nivelJefe1 = nivelJefe1 + 1
-        valorNivJefe = valorNivJefe * 2
-        tiempoJ = tiempoJ - 100
+        valorNivelJefe1 = valorNivelJefe1 * 2
+        tiempoJefe1 = tiempoJefe1 - 100
+        let intervalo
+        clearInterval(intervalo)
+        intervalo = setInterval(function () { clickear1(nivel1, 1) }, tiempoJefe1)
         // document.getElementById("NivelDeJefe").innerHTML = nivelJefe
-        return tiempoJ, nivJefe, valorJefe
+        return tiempoJefe1, nivelJefe1, valorNivelJefe1
     }
     else
         if (nivel == MaxNivjefe)
@@ -414,14 +417,13 @@ function subirNivelJefe3(nivJefe, valorNivJefe, tiempoJ, niv, piso) {
 
 
 //SUBIR JEFE POR NIVELES
-function subirJefe1(nivJefe, valorNivJefe, tiempoJ, niv, piso) {
-    setInterval(clickear1(1, 1), 1000)
+function subirJefe1(nivJefe) {
     if (nivJefe == 0) {
-        contratarJefe1(nivJefe)
+        contratarJefe1()
 
     }
     else
-        subirNivelJefe1(nivJefe, valorNivJefe, tiempoJ, niv, piso)
+        subirNivelJefe1()
 
 }
 
